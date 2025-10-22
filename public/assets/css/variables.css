@@ -1,0 +1,46 @@
+:root {
+  --font-sans: 'Poppins', 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Space Grotesk', 'Poppins', sans-serif;
+
+  --color-bg: #0b1220;
+  --color-bg-soft: #111a2c;
+  --color-text: rgba(255, 255, 255, 0.92);
+  --color-text-muted: rgba(255, 255, 255, 0.65);
+  --color-text-subtle: rgba(255, 255, 255, 0.48);
+  --color-accent: #38bdf8;
+  --color-accent-soft: rgba(56, 189, 248, 0.35);
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+
+  --glass-bg: rgba(255, 255, 255, 0.12);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-highlight: rgba(255, 255, 255, 0.6);
+  --glass-shadow: rgba(11, 18, 32, 0.55);
+
+  --radius-lg: 24px;
+  --radius-md: 20px;
+  --radius-sm: 12px;
+
+  --shadow-lg: 0 32px 60px rgba(8, 15, 26, 0.55);
+  --shadow-md: 0 20px 40px rgba(10, 17, 32, 0.45);
+  --shadow-sm: 0 12px 30px rgba(15, 23, 42, 0.35);
+
+  --transition-base: 250ms ease;
+  --transition-fast: 160ms ease;
+
+  --container-width: min(1080px, 92vw);
+  --header-height: 72px;
+
+  --gradient-glow: radial-gradient(circle at 10% 20%, rgba(56, 189, 248, 0.35), transparent 55%),
+    radial-gradient(circle at 80% 10%, rgba(129, 140, 248, 0.45), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(52, 211, 153, 0.3), transparent 55%),
+    linear-gradient(135deg, rgba(2, 8, 23, 0.85), rgba(15, 23, 42, 0.8));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-base: 0.01ms;
+    --transition-fast: 0.01ms;
+  }
+}
