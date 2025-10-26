@@ -24,6 +24,8 @@ body {
               radial-gradient(circle at 20% 20%, rgba(156, 103, 255, 0.35), transparent 55%),
               radial-gradient(circle at 80% 10%, rgba(247, 175, 130, 0.25), transparent 45%),
               #0d1a2b;
+  background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   line-height: 1.6;
   position: relative;
