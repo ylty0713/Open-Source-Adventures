@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wei Tingting · 星河小栈</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+  <audio id="bg-music" src="https://cdn.pixabay.com/download/audio/2021/09/01/audio_2d3b8530a8.mp3?filename=ethereal-ambient-11063.mp3" loop></audio>
+  <header>
+    <nav class="navbar">
+      <a class="navbar__brand" href="index.html">星河小栈 <span>Wei Tingting</span></a>
+      <button class="navbar__toggle" aria-expanded="false" aria-label="切换导航">☰</button>
+      <div class="navbar__links">
+        <a href="index.html" data-page-target="home">首页</a>
+        <a href="about.html" data-page-target="about">自我介绍</a>
+        <a href="photography.html" data-page-target="photography">摄影作品</a>
+        <a href="music.html" data-page-target="music">音乐播放器</a>
+        <a href="blog.html" data-page-target="blog">文章博客</a>
+        <a href="videos.html" data-page-target="videos">自媒体视频</a>
+        <a href="contact.html" data-page-target="contact">联系我</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero__left glass-card">
+        <div class="hero__profile">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Wei Tingting">
+          <div class="name">Wei Tingting</div>
+          <div class="role">摄影师 / 音乐博主 / 创作者</div>
+          <p class="fade-in">用镜头记录星河与人间的温度，用旋律讲述旅途的故事。</p>
+          <div class="hero__socials">
+            <a href="#" aria-label="微博">📷</a>
+            <a href="#" aria-label="Instagram">🌌</a>
+            <a href="#" aria-label="YouTube">🎬</a>
+            <a href="#" aria-label="Bilibili">📺</a>
+          </div>
+          <button class="music-toggle" type="button" data-music-toggle>
+            🔊 <strong>播放</strong>
+            <span>背景音乐</span>
+          </button>
+          <a class="button" href="contact.html">预约创作</a>
+        </div>
+      </div>
+
+      <div class="hero__right">
+        <div class="hero__headline" data-parallax="0.12">
+          <span class="badge">Welcome aboard</span>
+          <h1>Hello, I'm WeiTingting</h1>
+          <div class="typed-text" data-typed="摄影师·创作者|探索星辰与人间|用镜头和音乐写日记"></div>
+          <p class="section-subtitle">欢迎来到我的星河小栈，在这里你将听见音乐与远方的回声，看到旅途中每一个被光照亮的瞬间。</p>
+          <div class="hero__stats">
+            <div class="hero__stat-card">
+              <div class="hero__stat-value">15+</div>
+              <div class="hero__stat-label">旅行国家</div>
+            </div>
+            <div class="hero__stat-card">
+              <div class="hero__stat-value">3k+</div>
+              <div class="hero__stat-label">影像作品</div>
+            </div>
+            <div class="hero__stat-card">
+              <div class="hero__stat-value">12</div>
+              <div class="hero__stat-label">原创专辑</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="parallax-section" data-parallax="0.08">
+          <h2 class="section-title">本周旅程 · 阿尔卑斯晨曦</h2>
+          <p>记忆停在雪峰之巅的薄雾里，空气里漂浮着冷杉与冰雪的清香。清晨的第一缕阳光照亮山脊，仿佛给世界打上一层柔和的滤镜。</p>
+          <div class="grid grid--two">
+            <div class="glass-card fade-in">
+              <h3>旅途速写</h3>
+              <p>凌晨四点出发，沿着溪流逆行而上，薄雾在脚边翻涌。镜头里的一切都带着安静的力量。</p>
+            </div>
+            <div class="glass-card fade-in">
+              <h3>音乐记忆</h3>
+              <p>伴奏来自我最新的 Ambient Mix，将雪落的声音与木吉他混合，像是山谷里的低声吟唱。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="parallax-section" data-parallax="0.05">
+          <h2 class="section-title">灵感日签</h2>
+          <p>在快速更迭的世界里，请为自己保留一段与内心对话的时间。按下快门之前，先深呼吸，聆听风的方向。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2024 Wei Tingting · 星河小栈. 保留一份对世界的好奇。</footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
