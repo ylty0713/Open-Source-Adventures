@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>摄影作品 · Wei Tingting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="photography">
+  <header>
+    <nav class="navbar">
+      <a class="navbar__brand" href="index.html">星河小栈 <span>Wei Tingting</span></a>
+      <button class="navbar__toggle" aria-expanded="false" aria-label="切换导航">☰</button>
+      <div class="navbar__links">
+        <a href="index.html" data-page-target="home">首页</a>
+        <a href="about.html" data-page-target="about">自我介绍</a>
+        <a href="photography.html" data-page-target="photography">摄影作品</a>
+        <a href="music.html" data-page-target="music">音乐播放器</a>
+        <a href="blog.html" data-page-target="blog">文章博客</a>
+        <a href="videos.html" data-page-target="videos">自媒体视频</a>
+        <a href="contact.html" data-page-target="contact">联系我</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="photography-hero">
+      <div class="photography-slider">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1500&q=80" alt="雪山晨光">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1500&q=80" alt="雨林光影">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80" alt="海岸线">
+      </div>
+      <div class="photography-intro">
+        <span class="badge">Photography</span>
+        <h1 class="section-title">镜头里的万千世界</h1>
+        <p class="section-subtitle">通过轻盈的瀑布流布局呈现我的摄影作品。上方精选作品自动轮播，下方以卡片形式讲述每一张照片背后的故事。</p>
+        <p>作品涵盖旅行、自然、人文与城市光影。我喜欢在有限的画幅里，呈现多层次的情绪与时间流动感。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="masonry">
+        <div class="masonry-item glass-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="暮色雪山">
+          <div class="caption">《暮色雪山》— 日暮时分的粉色光带，将冰雪染成温柔的琥珀色。</div>
+        </div>
+        <div class="masonry-item glass-card">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80" alt="森林晨雾">
+          <div class="caption">《森林晨雾》— 光影穿透云雾，唤醒沉睡的森林。</div>
+        </div>
+        <div class="masonry-item glass-card">
+          <img src="https://images.unsplash.com/photo-1500534314209-0f8cb4d7200e?auto=format&fit=crop&w=1200&q=80" alt="海岸暮色">
+          <div class="caption">《海岸暮色》— 潮汐与霞光交织成梦境，留白处藏着海风的味道。</div>
+        </div>
+        <div class="masonry-item glass-card">
+          <img src="https://images.unsplash.com/photo-1470770903676-69b98201ea1c?auto=format&fit=crop&w=1200&q=80" alt="城市星轨">
+          <div class="caption">《城市星轨》— 喧嚣都市的夜空，也有星辰缓慢旋转。</div>
+        </div>
+        <div class="masonry-item glass-card">
+          <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80" alt="沙漠旅人">
+          <div class="caption">《沙漠旅人》— 风塑造的线条，在阳光下闪耀。</div>
+        </div>
+        <div class="masonry-item glass-card">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="冰川星空">
+          <div class="caption">《冰川星空》— 星空与冰川交织，像极了时间的长河。</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" aria-hidden="true">
+    <button type="button" data-lightbox-close class="button" style="position:absolute; top:2rem; right:2rem;">关闭</button>
+    <img src="" alt="预览作品">
+  </div>
+
+  <footer>© 2024 Wei Tingting · 星河小栈. 保留一份对世界的好奇。</footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

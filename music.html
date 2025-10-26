@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>音乐播放器 · Wei Tingting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="music">
+  <header>
+    <nav class="navbar">
+      <a class="navbar__brand" href="index.html">星河小栈 <span>Wei Tingting</span></a>
+      <button class="navbar__toggle" aria-expanded="false" aria-label="切换导航">☰</button>
+      <div class="navbar__links">
+        <a href="index.html" data-page-target="home">首页</a>
+        <a href="about.html" data-page-target="about">自我介绍</a>
+        <a href="photography.html" data-page-target="photography">摄影作品</a>
+        <a href="music.html" data-page-target="music">音乐播放器</a>
+        <a href="blog.html" data-page-target="blog">文章博客</a>
+        <a href="videos.html" data-page-target="videos">自媒体视频</a>
+        <a href="contact.html" data-page-target="contact">联系我</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="glass-card">
+      <span class="badge">Music Station</span>
+      <h1 class="section-title">星河播放间</h1>
+      <p class="section-subtitle">在旅途中录制的环境声与原创旋律，在这里编织成一份私人的声波日记。圆形波纹视觉化音乐律动，歌词缓慢滚动，陪你一起沉浸。</p>
+    </section>
+
+    <section class="glass-card" style="margin-top: 3rem;">
+      <div class="music-player">
+        <div class="music-visualizer">
+          <div style="width: 120px; height: 120px; border-radius: 50%; background: rgba(255,255,255,0.1); display: grid; place-items: center;">
+            🎧
+          </div>
+        </div>
+        <div class="music-details">
+          <h3 data-track-title></h3>
+          <p data-track-artist class="section-subtitle" style="margin-bottom: 0;">——</p>
+          <audio id="music-audio" preload="metadata"></audio>
+          <div class="music-controls">
+            <button type="button" data-prev aria-label="上一曲">⏮</button>
+            <button type="button" data-play aria-label="播放">▶</button>
+            <button type="button" data-next aria-label="下一曲">⏭</button>
+          </div>
+          <div class="music-progress">
+            <div class="music-progress__inner"></div>
+          </div>
+          <div class="lyrics">
+            <ul>
+              <li>正在加载歌词...</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="margin-bottom: 0.5rem;">歌单精选</h4>
+            <div class="playlist"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2024 Wei Tingting · 星河小栈. 保留一份对世界的好奇。</footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

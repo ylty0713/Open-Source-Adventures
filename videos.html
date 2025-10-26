@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自媒体视频 · Wei Tingting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="videos">
+  <header>
+    <nav class="navbar">
+      <a class="navbar__brand" href="index.html">星河小栈 <span>Wei Tingting</span></a>
+      <button class="navbar__toggle" aria-expanded="false" aria-label="切换导航">☰</button>
+      <div class="navbar__links">
+        <a href="index.html" data-page-target="home">首页</a>
+        <a href="about.html" data-page-target="about">自我介绍</a>
+        <a href="photography.html" data-page-target="photography">摄影作品</a>
+        <a href="music.html" data-page-target="music">音乐播放器</a>
+        <a href="blog.html" data-page-target="blog">文章博客</a>
+        <a href="videos.html" data-page-target="videos">自媒体视频</a>
+        <a href="contact.html" data-page-target="contact">联系我</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="glass-card">
+      <span class="badge">Video Hub</span>
+      <h1 class="section-title">影像日记 · 多平台联播</h1>
+      <p class="section-subtitle">精选 Bilibili 与 YouTube 的旅行影像，以及幕后花絮。每个视频都配有留白描述，方便快速了解内容亮点。</p>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <div class="videos-grid">
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Mountain Sunrise"></iframe>
+          <div class="video-content">
+            <h3>Alps Dawn</h3>
+            <p class="section-subtitle" style="margin-bottom: 0;">日出时分的阿尔卑斯，记录光影从山谷蔓延的过程。</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://player.bilibili.com/player.html?bvid=BV1QK4y1D7Ec&high_quality=1&autoplay=0" allowfullscreen title="Bilibili 摄影幕后"></iframe>
+          <div class="video-content">
+            <h3>幕后特辑：冰川之下</h3>
+            <p class="section-subtitle" style="margin-bottom: 0;">记录一次极地拍摄的幕后花絮，与团队在零下温度中追光。</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Lofi Live"></iframe>
+          <div class="video-content">
+            <h3>旅途听歌会</h3>
+            <p class="section-subtitle" style="margin-bottom: 0;">旅途中最常听的 Lo-fi 歌单，适合夜晚整理照片时播放。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2024 Wei Tingting · 星河小栈. 保留一份对世界的好奇。</footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

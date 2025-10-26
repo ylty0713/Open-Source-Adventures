@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文章博客 · Wei Tingting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="blog">
+  <header>
+    <nav class="navbar">
+      <a class="navbar__brand" href="index.html">星河小栈 <span>Wei Tingting</span></a>
+      <button class="navbar__toggle" aria-expanded="false" aria-label="切换导航">☰</button>
+      <div class="navbar__links">
+        <a href="index.html" data-page-target="home">首页</a>
+        <a href="about.html" data-page-target="about">自我介绍</a>
+        <a href="photography.html" data-page-target="photography">摄影作品</a>
+        <a href="music.html" data-page-target="music">音乐播放器</a>
+        <a href="blog.html" data-page-target="blog">文章博客</a>
+        <a href="videos.html" data-page-target="videos">自媒体视频</a>
+        <a href="contact.html" data-page-target="contact">联系我</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="glass-card">
+      <span class="badge">Blog</span>
+      <h1 class="section-title">用文字延长光影的余韵</h1>
+      <p class="section-subtitle">在这里记录旅途见闻、摄影心得与音乐灵感。卡片悬停呈现细腻动效，滚动至底部自动加载更多篇章。</p>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <div class="blog-list"></div>
+      <div class="blog-loading">向下滚动，探索更多故事...</div>
+    </section>
+  </main>
+
+  <footer>© 2024 Wei Tingting · 星河小栈. 保留一份对世界的好奇。</footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
