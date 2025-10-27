@@ -56,6 +56,20 @@
   .snow { display: none; }
 }
 
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* 视口 50% 高度，可根据图比例调整 */
+  overflow: hidden;
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 让图片铺满不变形 */
+  filter: brightness(0.9) saturate(1.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
 
 * {
   box-sizing: border-box;
@@ -270,6 +284,7 @@ main {
   grid-template-columns: 320px 1fr;
   gap: 2.5rem;
   min-height: calc(100vh - 120px);
+  margin-top: -40vh; /* 下移半屏，让上方显示长图 */
 }
 
 .hero__left {
