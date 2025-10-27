@@ -33,23 +33,33 @@ body[data-page="home"]::after {
 }
 
 /* === 雪花飘落特效层 === */
+/* === 雪花分层特效 === */
 .snow {
   position: fixed;
   inset: 0;
-  pointer-events: none; /* 不影响点击交互 */
+  pointer-events: none;
   overflow: hidden;
-  z-index: 0; /* 可根据需要调高或调低层级 */
 }
 
-/* 单个雪花 */
+/* 背景雪花层：在内容之后、背景之前 */
+.snow-back {
+  z-index: -1; /* ✅ 在主体内容下方 */
+}
+
+/* 前景雪花层：在内容之上 */
+.snow-front {
+  z-index: 1000; /* ✅ 在所有内容上方，但低于导航 */
+}
+
+/* 单个雪花样式（通用） */
 .snow__flake {
   position: absolute;
-  top: -10vh; /* 从屏幕上方开始 */
+  top: -10vh;
   left: var(--x);
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 80%);/* 中心边缘扩散 */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7) 80%);
   filter: blur(calc(var(--size) / 6));
   opacity: var(--opacity);
   animation:
@@ -57,7 +67,19 @@ body[data-page="home"]::after {
     snow-sway calc(var(--speed) * 0.6) ease-in-out var(--delay) infinite alternate;
 }
 
-/* 垂直下落动画 */
+/* 模糊+浅淡背景层雪花 */
+.snow-back .snow__flake {
+  filter: blur(2px);
+  opacity: 0.35;
+}
+
+/* 前景层雪花：更亮、更近 */
+.snow-front .snow__flake {
+  filter: blur(0.5px);
+  opacity: 0.9;
+}
+
+/* 下落动画 */
 @keyframes snow-fall {
   to {
     transform: translateY(110vh);
