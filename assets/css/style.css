@@ -36,7 +36,7 @@ body[data-page="home"]::after {
 /* === 雪花分层特效 === */
 .snow {
   position: fixed;
-  inset: 0;
+  inset: 1;
   pointer-events: none;
   overflow: hidden;
 }
