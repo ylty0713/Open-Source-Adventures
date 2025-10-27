@@ -81,17 +81,17 @@ function initHome() {
       if (audio.paused) {
         audio.play().catch(() => toggleButton.classList.add('is-muted'));
         toggleButton.classList.remove('is-muted');
-        toggleButton.querySelector('strong').textContent = '已暂停';
+        toggleButton.querySelector('strong').textContent = '正在播放';
       } else {
         audio.pause();
         toggleButton.classList.add('is-muted');
-        toggleButton.querySelector('strong').textContent = '正在播放';
+        toggleButton.querySelector('strong').textContent = '已暂停';
       }
     });
 
     audio.addEventListener('ended', () => {
       toggleButton.classList.add('is-muted');
-      toggleButton.querySelector('strong').textContent = '正在播放';
+      toggleButton.querySelector('strong').textContent = '已暂停';
     });
   }
 }
