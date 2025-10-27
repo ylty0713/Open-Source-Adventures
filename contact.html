@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body data-page="contact">
   <header>
@@ -51,21 +52,34 @@
         </label>
         <button class="button" type="submit">发送留言</button>
       </form>
-
-
       <div class="glass-card social-links">
-        <h2>社交平台</h2>
-        <a href="#">📷 微博 @星河小栈</a>
-        <a href="#">🌌 Instagram @stardust.diary</a>
-        <a href="#">🎬 YouTube @WeiTingting</a>
-        <a href="#">📺 Bilibili @星河拾光</a>
-        <p class="section-subtitle" style="margin-bottom: 0;">也欢迎发送邮件至 Huyu6427@gmail.com，我会在 48 小时内回复。</p>
-      </div>
+      <h2>社交平台</h2>
+      <a href="https://weibo.com" target="_blank">
+        <i data-lucide="message-circle"></i>
+        微博 @星河小栈
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <i data-lucide="instagram"></i>
+        Instagram @stardust.diary
+      </a>
+      <a href="https://youtube.com" target="_blank">
+        <i data-lucide="youtube"></i>
+        YouTube @WeiTingting
+      </a>
+      <a href="https://bilibili.com" target="_blank">
+        <i data-lucide="tv"></i>
+        Bilibili @星河拾光
+      </a>
+      <p class="section-subtitle" style="margin-bottom: 0;">
+        也欢迎发送邮件至 <strong>Huyu6427@gmail.com</strong>，我会在 48 小时内回复。
+      </p>
+    </div>
     </section>
   </main>
-
   <footer>© 2024 Wei Tingting · 星河小栈. 保留一份对世界的好奇。</footer>
-
   <script src="assets/js/main.js" defer></script>
+  <script>
+  lucide.createIcons(); // ✅ 渲染所有 data-lucide 图标
+  </script>
 </body>
 </html>
