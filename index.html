@@ -53,7 +53,53 @@
         <div class="hero__headline" data-parallax="0.12">
           <span class="badge">Welcome aboard</span>
           <h1>Hello, I'm Clodius</h1>
-          <div class="typed-text" data-typed="摄影师·创作者|探索星辰与人间|用镜头和音乐写日记"></div>
+          <div class="typed-text"></div>
+          <script>
+          const texts = [
+            "探索星辰与人间🪐",
+            "规则之外是自由⛵",
+            "博采众长，自成天地💡"
+          ];
+
+          // 自定义参数
+          const typingSpeed = 135;    // 打字速度（每个字之间的间隔，单位：ms）
+          const deletingSpeed = 60;   // 删除速度（退格间隔）
+          const pauseTime = 1200;     // 每句打完后的停顿时间（ms）
+
+          let textIndex = 0;          // 当前显示哪一句
+          let charIndex = 0;          // 当前显示到第几个字符
+          let isDeleting = false;     // 是否处于删除状态
+
+          function typeEffect() {
+            const el = document.querySelector(".typed-text");
+            const currentText = texts[textIndex];
+            
+            if (!isDeleting) {
+              // 正在打字
+              el.textContent = currentText.substring(0, charIndex + 1);
+              charIndex++;
+            } else {
+              // 正在删除
+              el.textContent = currentText.substring(0, charIndex - 1);
+              charIndex--;
+            }
+
+            // 判断状态切换
+            if (!isDeleting && charIndex === currentText.length) {
+              isDeleting = true;
+              setTimeout(typeEffect, pauseTime); // 打完句子后暂停
+              return;
+            } else if (isDeleting && charIndex === 0) {
+              isDeleting = false;
+              textIndex = (textIndex + 1) % texts.length; // 切换到下一句
+            }
+
+            const delay = isDeleting ? deletingSpeed : typingSpeed;
+            setTimeout(typeEffect, delay);
+          }
+
+          typeEffect();
+          </script>
           <p class="section-subtitle">欢迎来到我的星河小栈，在这里你将听见音乐与远方的回声，看到旅途中每一个被光照亮的瞬间。</p>
           <div class="hero__stats">
             <div class="hero__stat-card">
