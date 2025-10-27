@@ -20,7 +20,7 @@ body[data-page="home"]::before {
     url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1974&q=80')
     center/cover no-repeat;
   filter: blur(25px) brightness(0.55) saturate(1.2);
-  z-index: -2;
+  z-index: -3;
 }
 
 body[data-page="home"]::after {
@@ -29,7 +29,7 @@ body[data-page="home"]::after {
   inset: -20px; /* 超出屏幕边界防止白线 */
   background: rgba(10, 18, 30, 0.85); /* 暗色滤镜层 */
   backdrop-filter: blur(6px);
-  z-index: -3;
+  z-index: -2;
 }
 
 /* === 雪花飘落特效层 === */
