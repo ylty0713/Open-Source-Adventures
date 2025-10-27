@@ -851,7 +851,19 @@ main {
   min-height: 140px;
   resize: vertical;
 }
+/* 图标尺寸与颜色 */
+.social-links i {
+  width: 22px;
+  height: 22px;
+  color: var(--secondary-color);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
 
+/* 悬停时轻微放大、发光 */
+.social-links a:hover i {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 6px rgba(255, 213, 128, 0.6));
+}
 .social-links {
   display: flex;
   flex-direction: column;
@@ -859,6 +871,9 @@ main {
 }
 
 .social-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
