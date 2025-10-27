@@ -81,5 +81,39 @@
   <script>
   lucide.createIcons(); // ✅ 渲染所有 data-lucide 图标
   </script>
+  <div class="snow"></div>
+  <script>
+  (() => {
+    const SNOW_COUNT = 100;  // 雪花数量，可调
+    const container = document.querySelector('.snow');
+  
+    for (let i = 0; i < SNOW_COUNT; i++) {
+      const flake = document.createElement('span');
+      flake.className = 'snow__flake';
+  
+      // 随机参数
+      const size = random(2, 8); // 雪花大小(px)
+      const speed = random(8, 18); // 下落速度(s)
+      const delay = -random(0, 18); // 起始时间偏移
+      const x = `${Math.random() * 100}vw`; // 初始横向位置
+      const drift = `${(Math.random() * 2 - 1) * 15}vw`; // 横向摆动距离
+      const opacity = random(0.35, 0.9);
+  
+      // 设置CSS变量
+      flake.style.setProperty('--x', x);
+      flake.style.setProperty('--size', `${size}px`);
+      flake.style.setProperty('--speed', `${speed}s`);
+      flake.style.setProperty('--delay', `${delay}s`);
+      flake.style.setProperty('--drift', drift);
+      flake.style.setProperty('--opacity', opacity.toFixed(2));
+  
+      container.appendChild(flake);
+    }
+  
+    function random(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+  })();
+  </script>
 </body>
 </html>
