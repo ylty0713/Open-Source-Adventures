@@ -91,7 +91,7 @@ body::after {
   content: '';
   position: fixed;
   inset: 0;
-  background: linear-gradient(180deg, rgba(13, 26, 43, 0.09), rgba(13, 26, 43, 0.75));
+  background: linear-gradient(180deg, rgba(13, 26, 43, 0.09), rgba(13, 26, 43, 0.15)); /* 背景遮罩 */
   z-index: -1;
 }
 
