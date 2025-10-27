@@ -29,7 +29,7 @@
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) 80%);/* 中心边缘扩散 */
   filter: blur(calc(var(--size) / 6));
   opacity: var(--opacity);
   animation:
