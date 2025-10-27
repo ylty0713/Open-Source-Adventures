@@ -132,8 +132,15 @@ header {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--secondary-color);
+  text-shadow: 0 0 12px rgba(255, 213, 128, 0.5);
+  font-size: 1.4rem; /* ✅ 新增：设置字体大小 */
+  transition: text-shadow 0.3s ease, transform 0.3s ease;
 }
 
+.navbar__brand:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 18px rgba(255, 213, 128, 0.8);
+}
 .navbar__brand span {
   font-size: 0.75rem;
   color: var(--muted-text);
