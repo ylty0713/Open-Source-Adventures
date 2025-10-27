@@ -415,7 +415,7 @@ main {
   border-radius: 50%;
   background: var(--secondary-color);
   border: 3px solid rgba(255, 255, 255, 0.35);
-  left: -1.05rem;
+  left: -1.1rem;
   top: 1.8rem;
 }
 
