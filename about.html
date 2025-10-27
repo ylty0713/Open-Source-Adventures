@@ -91,39 +91,44 @@
 
   <footer>© 2024 Clodius · 星河小栈. 保留一份对世界的好奇。</footer>
   <script src="assets/js/main.js" defer></script>
-  <div class="snow"></div>
+  <div class="snow snow-back"></div>
+  <div class="snow snow-front"></div>
   <script>
-  (() => {
-    const SNOW_COUNT = 100;  // 雪花数量，可调
-    const container = document.querySelector('.snow');
-  
-    for (let i = 0; i < SNOW_COUNT; i++) {
-      const flake = document.createElement('span');
-      flake.className = 'snow__flake';
-  
-      // 随机参数
-      const size = random(2, 8); // 雪花大小(px)
-      const speed = random(8, 18); // 下落速度(s)
-      const delay = -random(0, 18); // 起始时间偏移
-      const x = `${Math.random() * 100}vw`; // 初始横向位置
-      const drift = `${(Math.random() * 2 - 1) * 15}vw`; // 横向摆动距离
-      const opacity = random(0.35, 0.9);
-  
-      // 设置CSS变量
-      flake.style.setProperty('--x', x);
-      flake.style.setProperty('--size', `${size}px`);
-      flake.style.setProperty('--speed', `${speed}s`);
-      flake.style.setProperty('--delay', `${delay}s`);
-      flake.style.setProperty('--drift', drift);
-      flake.style.setProperty('--opacity', opacity.toFixed(2));
-  
+(() => {
+  const layers = [
+    // 背景层：数量多、体积小、速度慢
+    { selector: ".snow-back", count: 40, size: [2, 5], speed: [12, 25], opacity: [0.2, 0.45] },
+    // 前景层：数量少、体积大、速度快
+    { selector: ".snow-front", count: 25, size: [4, 9], speed: [6, 15], opacity: [0.6, 1] }
+  ];
+
+  layers.forEach(layer => {
+    const container = document.querySelector(layer.selector);
+    for (let i = 0; i < layer.count; i++) {
+      const flake = document.createElement("span");
+      flake.className = "snow__flake";
+      const size = random(...layer.size);
+      const speed = random(...layer.speed);
+      const delay = -random(0, layer.speed[1]);
+      const x = `${Math.random() * 100}vw`;
+      const drift = `${(Math.random() * 2 - 1) * 15}vw`;
+      const opacity = random(...layer.opacity);
+
+      flake.style.setProperty("--x", x);
+      flake.style.setProperty("--size", `${size}px`);
+      flake.style.setProperty("--speed", `${speed}s`);
+      flake.style.setProperty("--delay", `${delay}s`);
+      flake.style.setProperty("--drift", drift);
+      flake.style.setProperty("--opacity", opacity.toFixed(2));
+
       container.appendChild(flake);
     }
-  
-    function random(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-  })();
-  </script>
+  });
+
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+})();
+</script>
 </body>
 </html>
