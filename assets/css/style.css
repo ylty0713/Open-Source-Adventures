@@ -59,7 +59,7 @@
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 50vh; /* 视口 50% 高度，可根据图比例调整 */
+  height: 60vh; /* 视口 60% 高度，可根据图比例调整 */
   overflow: hidden;
 }
 
