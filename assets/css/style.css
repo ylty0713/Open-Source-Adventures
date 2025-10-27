@@ -12,6 +12,51 @@
   font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
+/* === 雪花飘落特效层 === */
+.snow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* 不影响点击交互 */
+  overflow: hidden;
+  z-index: 0; /* 可根据需要调高或调低层级 */
+}
+
+/* 单个雪花 */
+.snow__flake {
+  position: absolute;
+  top: -10vh; /* 从屏幕上方开始 */
+  left: var(--x);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 70%);
+  filter: blur(calc(var(--size) / 6));
+  opacity: var(--opacity);
+  animation:
+    snow-fall var(--speed) linear var(--delay) infinite,
+    snow-sway calc(var(--speed) * 0.6) ease-in-out var(--delay) infinite alternate;
+}
+
+/* 垂直下落动画 */
+@keyframes snow-fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* 左右轻微摆动 */
+@keyframes snow-sway {
+  from { margin-left: 0; }
+  to { margin-left: var(--drift); }
+}
+
+/* 若用户启用“减少动画”，则关闭飘雪 */
+@media (prefers-reduced-motion: reduce) {
+  .snow__flake { animation: none; }
+  .snow { display: none; }
+}
+
+
 * {
   box-sizing: border-box;
 }
