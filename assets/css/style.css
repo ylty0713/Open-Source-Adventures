@@ -29,7 +29,7 @@ body[data-page="home"]::after {
   inset: -20px; /* 超出屏幕边界防止白线 */
   background: rgba(10, 18, 30, 0.85); /* 暗色滤镜层 */
   backdrop-filter: blur(6px);
-  z-index: -1;
+  z-index: -3;
 }
 
 /* === 雪花飘落特效层 === */
