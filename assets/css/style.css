@@ -387,7 +387,7 @@ main {
 .timeline::before {
   content: '';
   position: absolute;
-  top: 4;
+  top: 0;
   bottom: 0;
   left: 0.65rem;
   width: 2px;
@@ -416,7 +416,7 @@ main {
   background: var(--secondary-color);
   border: 3px solid rgba(255, 255, 255, 0.35);
   left: -1.7rem;
-  top: 1.8rem;
+  top: 4rem;
 }
 
 .timeline-item.is-visible {
