@@ -164,6 +164,35 @@
   <script>
     lucide.createIcons();
   </script>
+  <style>
+    /* 覆盖所有旧设置（优先级最高） */
+    .snow, .snow-back, .snow-front {
+      position: fixed !important;
+      inset: 0 !important;
+      pointer-events: none !important;
+      isolation: isolate !important;          /* ⭐关键：脱离父叠层 */
+      will-change: transform;                 /* 减少合成层意外 */
+    }
+    .snow-back  { z-index: 1 !important; }           /* 在内容后面 */
+    .snow-front { z-index: 2147483647 !important; }  /* 在所有内容前面 */
+
+    /* 保底雪花粒子样式 */
+    .snow__flake {
+      position: absolute; top: -10vh; left: var(--x);
+      width: var(--size); height: var(--size); border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.9), rgba(255,255,255,.7) 80%);
+      filter: blur(calc(var(--size)/6));
+      opacity: var(--opacity);
+      animation:
+        snow-fall var(--speed) linear var(--delay) infinite,
+        snow-sway calc(var(--speed)*.6) ease-in-out var(--delay) infinite alternate;
+    }
+    .snow-back  .snow__flake { filter: blur(2px); opacity: .35; }
+    .snow-front .snow__flake { filter: blur(.5px); opacity: .9;  }
+
+    @keyframes snow-fall { to { transform: translateY(110vh); } }
+    @keyframes snow-sway { from { margin-left: 0; } to { margin-left: var(--drift); } }
+  </style>
   <div class="snow snow-back"></div>
   <div class="snow snow-front"></div>
   <script>
