@@ -301,19 +301,59 @@ main {
   text-transform: uppercase;
 }
 
+/* 统一按钮基础样式 */
+.music-toggle,
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(120deg, rgba(255, 213, 128, 0.28), rgba(156, 103, 255, 0.35));
-  color: var(--text-color);
+  
+  /* 统一尺寸 */
   padding: 0.75rem 1.6rem;
-  border-radius: 999px;
+  height: 48px;
+  border-radius: 999px; /*  999px 药丸形 */
+  
+  /* 统一边框和光标 */
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* 统一字体 */
   font-weight: 600;
+  color: white;
+  text-decoration: none;
+  
+  /* 统一动画 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 播放按钮 - 半透明紫粉渐变 */
+.music-toggle {
+  background: linear-gradient(135deg, rgba(102, 31, 119, 0.5) 0%, rgba(40, 23, 99, 0.5) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.music-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(155, 107, 255, 0.4);
+}
+
+/* 预约按钮 - 黄色到蓝色渐变 */
+.button {
+  background: linear-gradient(135deg, rgba(22, 18, 63, 0.5) 0%, rgba(84, 94, 28, 0.5) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 140, 255, 0.4);
+}
+
+/* 按钮按下效果 */
+.music-toggle:active,
+.button:active {
+  transform: translateY(0);
 }
 
 .button:hover {
@@ -333,6 +373,7 @@ main {
   position: sticky;
   top: 120px;
   align-self: start;
+  padding-top: 80px; /* 为头像溢出预留空间 */
 }
 
 .hero__profile {
@@ -341,6 +382,7 @@ main {
   align-items: center;
   text-align: center;
   gap: 1rem;
+  position: relative; /* 为头像定位提供参照 */
 }
 
 .hero__profile img {
@@ -349,6 +391,10 @@ main {
   border-radius: 32px;
   object-fit: cover;
   border: 4px solid rgba(255, 255, 255, 0.35);
+  position: relative; /* ✅ 新增：启用定位 */
+  top: -160px; /* ✅ 新增：向上偏移80px，让头像超出卡片 */
+  margin-bottom: -160px; /* ✅ 新增：消除头像占用的空间，避免下方内容下移 */
+  box-shadow: 0 15px 40px rgba(9, 15, 28, 0.5); /* ✅ 可选：增强立体感 */
 }
 
 .hero__profile .name {
@@ -453,18 +499,6 @@ main {
 .hero__stat-value {
   font-size: 2.5rem;
   font-weight: 600;
-}
-
-.music-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.1rem;
-  border-radius: 999px;
-  background: rgba(156, 103, 255, 0.28);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  cursor: pointer;
-  font-weight: 500;
 }
 
 .music-toggle span {
