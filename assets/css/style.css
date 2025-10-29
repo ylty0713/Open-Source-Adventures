@@ -270,6 +270,11 @@ main {
   box-shadow: 0 20px 45px rgba(6, 12, 21, 0.35);
 }
 
+.card-one {
+  background: rgba(6, 12, 21, 0.35); /* 蓝色背景 */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* 白色边框 */
+}
+
 .section-title {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 1rem;
