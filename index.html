@@ -4,6 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clodius · 星河小栈</title>
+  <style>
+    /* 加载动画样式 */
+    #loader {
+      position: fixed;
+      inset: 0;
+      background: #f9fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      z-index: 9999;
+      transition: opacity .6s ease;
+    }
+    .square {
+  width: 20px;
+  height: 20px;
+  background: #fbffc5;
+  animation: jump 1.2s infinite ease-in-out;
+  }
+  .square:nth-child(2) { animation-delay: 0.2s; background: #dee491; }
+  .square:nth-child(3) { animation-delay: 0.4s; background: #b3bb3d; }
+  @keyframes jump {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+  }
+  .fade-out { opacity: 0; pointer-events: none; }
+  </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,6 +38,12 @@
 </head>
 <body data-page="home"> 
   <audio id="bg-music" src="assets/audio/mymusic.mp3" loop></audio>
+  <!-- 加载动画 -->
+  <div id="loader">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+  </div>
   <header>
     <nav class="navbar">
       <a class="navbar__brand" href="index.html">星河小栈 <span>Clodius</span></a>
@@ -205,6 +238,13 @@
     return Math.random() * (max - min) + min;
   }
 })();
+</script>
+<script>
+  window.addEventListener("load", ()=>{
+    const loader = document.getElementById("loader");
+    loader.classList.add("fade-out");
+    setTimeout(()=>loader.remove(), 600);
+  });
 </script>
 </body>
 </html>
