@@ -111,6 +111,9 @@ body[data-page="home"]::after {
   object-fit: cover; /* 让图片铺满不变形 */
   filter: brightness(0.9) saturate(1.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
 }
 
 * {
