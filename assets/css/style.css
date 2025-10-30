@@ -398,7 +398,7 @@ main {
   height: 160px;
   border-radius: 999px;
   object-fit: cover;
-  border: -4px solid rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.35);
   position: relative; /* ✅ 新增：启用定位 */
   top: -160px; /* ✅ 新增：向上偏移80px，让头像超出卡片 */
   margin-bottom: -160px; /* ✅ 新增：消除头像占用的空间，避免下方内容下移 */
