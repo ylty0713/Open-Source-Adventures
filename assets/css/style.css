@@ -255,7 +255,7 @@ header {
 }
 
 main {
-  width: 60%;          /* 宽度为视口的60% */
+  width: 65%;          /* 宽度为视口的60% */
   max-width: 2000px;   /* 仍然限制最大宽度 */
   margin: 0 auto;
   padding: 3rem 2rem 5rem;
