@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: Open-Source-Adventures # 网站主分支名（比如 main 或 master）
+  branch: main # 网站主分支名（比如 main 或 master）
 media_folder: "images/uploads" # 图片保存路径
 public_folder: "/images/uploads"
 
