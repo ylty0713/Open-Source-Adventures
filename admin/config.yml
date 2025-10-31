@@ -1,8 +1,6 @@
 backend:
-  name: github
+  name: git-gateway
   branch: Open-Source-Adventures # 网站主分支名（比如 main 或 master）
-  repo: clodius0713/earnest-marigold-a73d11
-
 media_folder: "images/uploads" # 图片保存路径
 public_folder: "/images/uploads"
 
