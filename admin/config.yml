@@ -1,10 +1,12 @@
 backend:
-  name: git-gateway
+  name: github
   repo: clodius0713/Open-Source-Adventures  # 你的 GitHub 仓库
-  branch: main                              # 你的主分支名（请确认是否为 main 或 master）
+  branch: main
+  base_url: https://api.netlify.com  # 如果用 Netlify 代理 OAuth
+  auth_endpoint: /api/auth           # 可选
 
-media_folder: "images/uploads"    # 图片存放路径（在仓库里）
-public_folder: "/images/uploads"  # 图片访问路径（在网站上）
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
