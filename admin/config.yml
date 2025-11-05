@@ -3,7 +3,7 @@ backend:
   repo: clodius0713/Open-Source-Adventures  # 你的 GitHub 仓库
   branch: main
   base_url: https://api.netlify.com  # 如果用 Netlify 代理 OAuth
-  auth_endpoint: /api/auth           # 可选
+  auth_endpoint: /auth           # 可选
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
