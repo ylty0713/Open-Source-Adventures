@@ -4,7 +4,7 @@
 
 ## 1. 全局背景与色彩
 
-站点的所有页面会继承 `assets/css/style.css` 顶部 `:root` 中定义的 CSS 变量。
+站点的所有页面会继承 `assets/css/base.css` 顶部 `:root` 中定义的 CSS 变量；各页面的独特样式则在同目录下的 `home.css`、`about.css`、`photography.css` 等文件中维护。
 
 ```css
 :root {
@@ -16,7 +16,7 @@
 ```
 
 ### 更换全站背景图
-1. 在 `assets/css/style.css` 中找到 `--background-image`。 
+1. 在 `assets/css/base.css` 中找到 `--background-image`。
 2. 将 `url('...')` 内的地址替换为你自己的图片链接，或替换成本地文件相对路径（例如 `url('../images/aurora.jpg')`）。
 3. 如果使用本地图片，请将图片放在 `assets/images/` 或任何你喜欢的文件夹下，并注意路径写法是以 CSS 文件所在目录为基准。
 4. 可根据图片明暗程度，微调 `body::before` 与 `body::after` 下面的 `filter`、`opacity` 或线性渐变色值，确保玻璃拟态的层次感。

@@ -1,0 +1,36 @@
+.blog-post {
+  display: grid;
+  gap: 2rem;
+}
+
+.blog-post header {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.blog-post header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(255, 213, 128, 0.9), rgba(156, 103, 255, 0.9));
+}
+
+.blog-post img {
+  width: 100%;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 45px rgba(9, 15, 28, 0.35);
+}
+
+.blog-post article {
+  background: rgba(15, 28, 45, 0.7);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px rgba(9, 15, 28, 0.4);
+}
+
