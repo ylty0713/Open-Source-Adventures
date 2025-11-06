@@ -70,6 +70,7 @@ body[data-page="home"]::after {
   width: 100%;
   height: 60vh;
   overflow: hidden;
+  margin-top: calc(-1 * var(--nav-height));
 }
 
 .hero-banner img {
@@ -80,6 +81,10 @@ body[data-page="home"]::after {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+body[data-page="home"] main {
+  margin-top: var(--nav-height);
 }
 
 .hero {
