@@ -68,7 +68,7 @@ body[data-page="home"]::after {
 .hero-banner {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 76vh;
   overflow: hidden;
   margin-top: calc(-1 * var(--nav-height));
 }
