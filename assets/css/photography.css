@@ -51,15 +51,13 @@ body[data-page="photography"]::after {
 
 .banner-fixed-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2; /* 高于图片层 */
+  bottom: 2rem;       /* 距离轮播图底部距离 */
+  left: 8%;           /* 距离轮播图左侧距离，可调整 */
+  z-index: 2;         /* 确保叠在图片上方 */
   color: #fff;
-  text-align: center;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
-  pointer-events: none; /* 防止挡住下方点击 */
-  width: min(90%, 800px);
+  max-width: 600px;   /* 控制文字宽度，不要太长 */
+  pointer-events: none; /* 不挡住圆点或按钮点击 */
 }
 
 .banner-dots {
