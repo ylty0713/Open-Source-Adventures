@@ -8,7 +8,7 @@
   --glass-border: rgba(255, 255, 255, 0.18);
   --blur-radius: 22px;
   --background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1974&q=80');
-  --nav-height: 5rem;
+  --nav-height: 4rem;
   font-size: 16px;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
@@ -72,9 +72,9 @@ header {
   justify-content: space-between;
   margin: 0 auto;
   width: min(80%, 1200px);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   min-height: var(--nav-height);
-  background: rgba(61, 68, 78, 0.78);
+  background: rgba(61, 68, 78, 0.48);
   backdrop-filter: blur(var(--blur-radius));
   border-radius: 0 0 24px 24px;
   box-shadow: 0 10px 30px rgba(6, 12, 21, 0.35);
