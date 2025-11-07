@@ -71,7 +71,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: min(80%, 1200px);
+  width: 80%;          /* 改为全宽 */
+  max-width: none;      /* 取消最大宽限制 */
   padding: 0rem 1rem;
   min-height: var(--nav-height);
   background: rgba(61, 68, 78, 0.48);

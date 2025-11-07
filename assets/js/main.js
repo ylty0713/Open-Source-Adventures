@@ -1,4 +1,4 @@
-const NAV_LINK_SELECTOR = '.navbar__links a';
+﻿const NAV_LINK_SELECTOR = '.navbar__links a';
 
 function setupNavigation() {
   const navToggle = document.querySelector('.navbar__toggle');
@@ -74,6 +74,34 @@ function initHome() {
     });
   }
 
+  const heroBanner = document.querySelector('.hero-banner');
+  const heroTitle = heroBanner ? heroBanner.querySelector('.hero-banner__title') : null;
+  if (heroBanner && heroTitle) {
+    let latestScrollY = window.scrollY;
+    let ticking = false;
+
+    const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+    const getFadeDistance = () => Math.max(heroBanner.offsetHeight * 0.32, 1); /* 淡化速度 */
+
+    const applyOpacity = () => {
+      const progress = clamp(latestScrollY / getFadeDistance(), 0, 1);
+      heroTitle.style.opacity = String(1 - progress);
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      latestScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(applyOpacity);
+        ticking = true;
+      }
+    };
+
+    applyOpacity();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', applyOpacity);
+  }
+
   const audio = document.querySelector('#bg-music');
   const toggleButton = document.querySelector('[data-music-toggle]');
   if (audio && toggleButton) {
@@ -97,15 +125,45 @@ function initHome() {
 }
 
 function initPhotography() {
-  const sliderImages = document.querySelectorAll('.photography-slider img');
-  if (sliderImages.length) {
+  const bannerSlides = document.querySelectorAll('.banner-slide');
+  const dots = document.querySelectorAll('.banner-dot');
+  if (bannerSlides.length) {
     let current = 0;
-    sliderImages[current].classList.add('is-active');
-    setInterval(() => {
-      sliderImages[current].classList.remove('is-active');
-      current = (current + 1) % sliderImages.length;
-      sliderImages[current].classList.add('is-active');
-    }, 4500);
+    let timerId;
+
+    const activate = (next) => {
+      bannerSlides.forEach((slide, index) => {
+        slide.classList.toggle('is-active', index === next);
+      });
+      dots.forEach((dot, index) => {
+        const isActive = index === next;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', String(isActive));
+      });
+      current = next;
+    };
+
+    const startAutoPlay = () => {
+      timerId = setInterval(() => {
+        const next = (current + 1) % bannerSlides.length;
+        activate(next);
+      }, 5000);
+    };
+
+    const resetAutoPlay = () => {
+      clearInterval(timerId);
+      startAutoPlay();
+    };
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        activate(index);
+        resetAutoPlay();
+      });
+    });
+
+    activate(0);
+    startAutoPlay();
   }
 
   const lightbox = document.querySelector('.lightbox');
@@ -392,3 +450,4 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
