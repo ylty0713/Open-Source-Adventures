@@ -73,7 +73,26 @@
       </div>
     </div>
   </section>
-
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.banner-slide');
+    let index = 0;
+  
+    const fadeTime = 1200;  // 淡入淡出动画时间
+    const displayTime = 6400; // 每张图片停留时间
+  
+    function showSlide(nextIndex) {
+      slides[index].classList.remove('is-active');
+      slides[nextIndex].classList.add('is-active');
+      index = nextIndex;
+    }
+  
+    setInterval(() => {
+      const next = (index + 1) % slides.length;
+      showSlide(next);
+    }, displayTime);
+  });
+  </script>
 <main>
     <section class="photography-intro glass-card">
       <span class="badge">About the series</span>
@@ -161,4 +180,5 @@
 </script>
 </body>
 </html>
+
 
