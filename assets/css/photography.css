@@ -52,7 +52,7 @@ body[data-page="photography"]::after {
 .banner-fixed-overlay {
   position: absolute;
   bottom: 2rem;       /* 距离轮播图底部距离 */
-  left: 8%;           /* 距离轮播图左侧距离，可调整 */
+  left: 20%;           /* 距离轮播图左侧距离，可调整 */
   z-index: 2;         /* 确保叠在图片上方 */
   color: #fff;
   text-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
