@@ -38,6 +38,7 @@ body[data-page="photography"]::after {
 
 .banner-slide.is-active {
   opacity: 1;
+  z-index: 1;
   position: absolute;
 }
 
