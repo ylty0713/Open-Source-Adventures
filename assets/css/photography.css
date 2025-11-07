@@ -3,7 +3,7 @@ body[data-page="photography"] {
     radial-gradient(circle at 10% 20%, rgba(21, 118, 213, 0.35), transparent 60%),
     radial-gradient(circle at 80% 0, rgba(247, 175, 130, 0.25), transparent 45%),
     url('assets/img/01.jpg') center/cover fixed,
-    #ffffff;
+    #111111;
 }
 
 body[data-page="photography"]::before,
