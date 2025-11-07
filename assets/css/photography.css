@@ -33,7 +33,7 @@ body[data-page="photography"]::after {
   inset: 0;
   position: absolute;
   opacity: 0;
-  transition: opacity 0.6s ease;
+  transition: opacity 1.2s ease;
 }
 
 .banner-slide.is-active {
