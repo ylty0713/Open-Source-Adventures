@@ -52,7 +52,7 @@
         <button type="button" class="banner-dot" aria-label="第五张幻灯片" aria-selected="false"></button>
       </div>
     </div>
-    <!-- ✨ 固定不变的文字层 -->
+    <!-- 固定文字层 -->
     <div class="banner-fixed-overlay">
       <h1>镜头里的万千世界</h1>
       <p>让光线代替语言，记录那些肉眼难以察觉的瞬间。</p>
@@ -63,7 +63,6 @@
     const slides = document.querySelectorAll('.banner-slide');
     let index = 0;
   
-    const fadeTime = 1200;  // 淡入淡出动画时间
     const displayTime = 6400; // 每张图片停留时间
   
     function showSlide(nextIndex) {
@@ -165,6 +164,7 @@
 </script>
 </body>
 </html>
+
 
 
 
